@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { User } from './user.model';
 
 @Component({
   selector: 'app-user-profile',
@@ -10,15 +11,11 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './user-profile.component.css'
 })
 export class UserProfileComponent {
-  user = {
-    name: 'Doe',
-    firstName: 'John',
-    age: 25,
-    quote: '',
-    photo: 'https://randomuser.me/api/portraits/lego/2.jpg'
-  };
-  citation: string = "";
+  user: User;
   hide: boolean = true;
+  constructor() {
+    this.user = new User('Doe', 'John', 25, '', 'https://randomuser.me/api/portraits/lego/2.jpg');
+  }
   hideAge(): void {
     this.hide = !this.hide;
   }
