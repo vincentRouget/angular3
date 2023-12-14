@@ -1,1 +1,7 @@
+<h1>QUETE 2_____________________________________________________________</h1>
 <app-user-profile></app-user-profile>
+<h1>QUETE 3_____________________________________________________________</h1>
+<h1 [ngClass]="{ 'rouge': isAdmin }">Bonjour !</h1>
+<button (click)="hideEdit()">View</button>
+<button *ngIf="isAdmin">Edit</button>
+<h1>QUETE 4_____________________________________________________________</h1>

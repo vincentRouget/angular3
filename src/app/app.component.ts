@@ -12,4 +12,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 })
 export class AppComponent {
   title = 'angular3';
+  isAdmin: boolean = true;
+
+  hideEdit(): void {
+    this.isAdmin = !this.isAdmin;
+  }
 }

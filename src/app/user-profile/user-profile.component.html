@@ -1,17 +1,19 @@
-<div class="Container">
-    <div class="Image">
+<div class="container">
+    <div class="image">
         <img [src]="user.photo" alt="photo">
     </div>
     <button (click)="hideAge()">Afficher/Masquer mon âge</button>
-    <div class="Age">
+    <div class="age">
         <p *ngIf="hide">Age : {{user.age}}</p>
     </div>
-    <p>Nom : {{user.name}}</p>
-    <p>Prénom : {{user.firstName}}</p>
-    <div class="Input">
+    <div class="identity">
+        <p>Nom : {{user.name}}</p>
+        <p>Prénom : {{user.firstName}}</p>
+    </div>
+    <div class="input">
         <input type="text" [(ngModel)]="user.quote" placeholder="Ecrire ici...">
     </div>
-    <div class="Citation">
+    <div class="citation">
         <p>{{user.quote}}</p>
     </div>
 </div>
